@@ -9,7 +9,6 @@ function App() {
     fetch('https://fakestoreapi.com/products')
       .then((response) => response.json())
       .then((data) =>setProducts(data))
-      .catch((error) => console.error('Error fetching data:', error));
   }, []);
   return (
     <>
@@ -23,7 +22,7 @@ function App() {
               <img src={product.image}  className="w-full h-48 object-contain mb-4" />
             <h2 className="text-lg font-bold mb-2">{product.title}</h2>
             <p className="text-gray-500">${product.price}
-              
+
             </p>
           </div>
         ))}
